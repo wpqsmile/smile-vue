@@ -1,101 +1,28 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <div id="app">
+    <zujian :list='list' :fouce="true" :imgtime='1000'></zujian>
   </div>
 </template>
 
 <script>
+import zujian from './zujian'
 export default {
   name: 'HelloWorld',
+  components:{zujian},
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+  			 list:[require('@/assets/7.jpg'),require('@/assets/13.jpg'),require('@/assets/17.jpg'),require('@/assets/17.jpg')]      
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style >
+  *{
+       margin: 0px;
+       padding: 0px;
+     }
 h1, h2 {
   font-weight: normal;
 }
@@ -110,4 +37,33 @@ li {
 a {
   color: #42b983;
 }
+    .contener{
+      width:500px;
+      height: 400px;
+      border:1px solid #f00;
+      position: relative;
+    }
+    .contener img{
+       display: block;
+       width: 100%;
+       height: 100%;
+    }
+    .contener .jiaod{
+      position: absolute;
+      bottom: 10px;
+      width:100%;
+      line-height: 50px;  
+      text-align: center;
+    }
+    .contener .jiaod span{
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      background-color: #fff;
+      margin: 0px 5px;
+    }
+    .contener .jiaod span.cur{
+      background-color: #f00;
+    }
 </style>
