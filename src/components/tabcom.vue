@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style type="text/css" scoped>
+<style scoped type="text/css">
 	
 .content{
 	width: 500px;

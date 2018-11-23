@@ -11,32 +11,14 @@ export default {
   components:{zujian},
   data () {
     return {
-  			 list:[require('@/assets/7.jpg'),require('@/assets/13.jpg'),require('@/assets/17.jpg'),require('@/assets/17.jpg')]      
+  			 list:[require('@/assets/imgs/7.jpg'),require('@/assets/imgs/13.jpg'),require('@/assets/imgs/17.jpg'),require('@/assets/imgs/17.jpg')]      
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style >
-  *{
-       margin: 0px;
-       padding: 0px;
-     }
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style scoped>
     .contener{
       width:500px;
       height: 400px;

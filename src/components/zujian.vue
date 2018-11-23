@@ -4,7 +4,7 @@
         <img :src="v" alt="" v-for="(v, index) in list" :key="index" v-show='index==curimg' >
         </transition-group>
         <div class="jiaod" v-show="fouce">
-            <span v-for="(val,index) of list" :class="index==curimg?'cur':''"></span>
+            <span v-for="(val,index) of list" :key="index" :class="index==curimg?'cur':''"></span>
         </div>
     </div>
 </template>
@@ -20,7 +20,7 @@
         list:{
           type:Array,
           default:function(){
-  			return [require('@/assets/7.jpg'),require('@/assets/13.jpg'),require('@/assets/17.jpg'),require('@/assets/17.jpg')];      
+  			return [require('@/assets/imgs/7.jpg'),require('@/assets/imgs/13.jpg'),require('@/assets/imgs/17.jpg'),require('@/assets/imgs/17.jpg')];      
 
          
           }
@@ -46,6 +46,6 @@
     }
 </script>
 
-<style >
+<style scoped>
 
 </style>
