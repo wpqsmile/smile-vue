@@ -99,7 +99,8 @@ import BScroll from 'better-scroll'
         },
         methods:{
             getcity(){
-                axios.get('../../static/data/city.json').then( (res)=>{
+               
+                axios.get('/api/city.json').then( (res)=>{
                     this.hotCities = res.data.data.hotCities;
                     var obj = res.data.data.cities;
                     for(var p in obj){

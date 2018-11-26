@@ -77,7 +77,8 @@ import transitionfade from "./transitionfade.vue"
                 return this.$refs._one.swiper
             },
             getdetail(){
-                axios.get('../../static/data/detail.json').then((res)=>{
+                 
+                axios.get('/api/detail.json').then((res)=>{
                     this.imglist = res.data.data.gallaryImgs;
                     this.lilist = res.data.data.categoryList;
                     this.sightname = res.data.data.sightName;

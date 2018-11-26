@@ -32,7 +32,7 @@ import ullist from './ullist';
         },
         methods:{
             getindex(){
-                axios.get('../../static/data/index.json').then((res)=>{
+                axios.get('/api/index.json').then((res)=>{
                     // console.log(res.data.data);
                     this.swiperlist = res.data.data.swiperList;
                     this.iconlist = res.data.data.iconList;

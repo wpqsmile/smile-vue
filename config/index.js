@@ -10,7 +10,11 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api/*':{
+        target:'http://127.0.0.1'
+      }
+    },
 
     // Various Dev Server settings
     host: '192.168.43.7', // can be overwritten by process.env.HOST
@@ -43,7 +47,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/smile_one/',
 
     /**
      * Source Maps
